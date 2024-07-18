@@ -87,7 +87,6 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-
     - name: Clone source code
       working-directory: /workdir
       run: |
@@ -97,7 +96,7 @@ jobs:
 
       - name: Update feeds
         run: |
-		   
+	 cd /workdir/openwrt	   
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
