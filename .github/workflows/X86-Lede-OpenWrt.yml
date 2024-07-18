@@ -85,7 +85,6 @@ jobs:
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
-        mkdir -p /workdir
     - name: Clone source code
       working-directory: /workdir
       run: |
